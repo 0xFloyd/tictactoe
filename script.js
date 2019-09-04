@@ -21,6 +21,7 @@
  const gameBoard = (() => {     //gameboard module. IIFE (Immediately Invoked Function Expression)
     let gameBoard = [];
     let boardSpacesArray = document.getElementsByClassName('boardSpace');
+    let gameScore = document.getElementById('score-paragraph');
 
     const playerClicked = (event) => { 
         if (!gameBoard.includes(Number(event.target.id))) {
@@ -41,7 +42,7 @@
         element.addEventListener('click', playerClicked); //console.log(element);
     });
 
-    return {gameBoard, boardSpacesArray, playerClicked};
+    return {gameBoard, boardSpacesArray, playerClicked, gameScore};
 })();
 
 
@@ -60,18 +61,31 @@ const game =(() => {
         //turn = 0;
     }
 
+
+
+    const checker = (arr, target) => target.every(v => arr.includes(v));
+
+
     const checkWinner = (temporary) => {
-        checkPlayer = temporary;
-        //console.log(checkPlayer.moves[i]);
-        ====================================================================================================
-         Array.from(winningCombinations).forEach((element) => {
-            Array.from(element).forEach((element2) => {
-                console.log(element2);
-        });
+        checkPlayer = temporary;        
+         
+        Array.from(winningCombinations).forEach((element) => {
+            if (checker(checkPlayer.moves, element)) {
+                //console.log(checkPlayer.name);
+                gameBoard.gameScore.innerHTML = checkPlayer.name;
+
+            }
+
+            else {
+                return;
+            }
+            //console.log(checker(checkPlayer.moves, element))
+                //console.log(element);
         });
         
         
-        /*
+        
+       /*
         winningCombinations.forEach(function (element) {
             console.log(element)
             
@@ -87,6 +101,7 @@ const game =(() => {
         checkWinner,
         player1,
         player2,
+        checker,
     };
 
 })();
