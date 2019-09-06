@@ -43,9 +43,27 @@
                 </tr>
             </table>
         </div>
-        <div>
-            <h3 class="text-center" id="score-paragraph">Score</h3>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col text-center">
+                    Player X Score
+                </div>
+                <div class="col text-center">
+                    Player O Score
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <p id="player1DisplayScore">0</p>
+                </div>
+                <div class="col text-center">
+                     <p id="player2DisplayScore">0</p>
+                </div>
+            </div>
         </div>
+            <h3 class="text-center" id="score-paragraph">&nbsp;</h3>
+            <input type="button" value="reset board" class="buttons center" id="boardResetButton">
+        
     </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

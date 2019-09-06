@@ -15,3 +15,39 @@
 .tableContainer {
     color: red;
 }
+
+.buttons {
+    -webkit-appearance: none;
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px 30px 10px 30px;
+    color: white;
+    margin: 20px 10px 20px 10px;
+    border-radius: 6px;
+    text-align: center;
+    transition: top .01s linear;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+    background-color: #cb99c5;
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 0 0 0 1px #cb99c5 inset,
+        0 0 0 2px rgba(255, 255, 255, 0.15) inset,
+        0 8px 0 0 rgba(189, 142, 183, .7),
+        0 8px 0 1px rgba(0, 0, 0, .4),
+        0 8px 8px 1px rgba(0, 0, 0, 0.5);
+}
+
+div {
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+#boardResetButton {
+    display: none;
+}
