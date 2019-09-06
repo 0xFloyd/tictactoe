@@ -1,6 +1,14 @@
 
+
+p {
+    padding: 0px;
+    margin: 0px;
+    color: #cb99c5;
+}
+
+
 .boardSpace {
-    font-size: 40px;
+    font-size: 50px;
     text-align: center;
     vertical-align: middle;
     height: 100px;
@@ -13,7 +21,13 @@
 }
 
 .tableContainer {
-    color: red;
+    color: #cb99c5;
+    font-family: 'Gloria Hallelujah',
+    cursive;
+}
+
+#gameTitle {
+    color: #cb99c5;
 }
 
 .buttons {
@@ -38,6 +52,8 @@
         0 8px 8px 1px rgba(0, 0, 0, 0.5);
 }
 
+
+
 div {
     margin: auto;
     text-align: center;
@@ -50,4 +66,40 @@ div {
 
 #boardResetButton {
     display: none;
+    margin-top: -30px;
+}
+
+#gameResetButton {
+    position: absolute;
+    border-radius: 6px;
+    top: 10px;
+    right: 10px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+    color: white;
+    background-color: #cb99c5;
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 0 0 0 1px #cb99c5 inset,
+    0 0 0 2px rgba(255, 255, 255, 0.15) inset,
+    0 8px 0 0 rgba(189, 142, 183, .7),
+    0 8px 0 1px rgba(0, 0, 0, .4),
+    0 8px 8px 1px rgba(0, 0, 0, 0.5);
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    #boardResetButton {
+        margin-top: 0px;
+    }
+}
+
+
+@media only screen and (min-width : 760px) {
+    .playerXScore {
+        padding-left: 25%;
+    }
+
+    .playerOScore {
+        padding-right: 25%;
+    }
 }

@@ -71,24 +71,6 @@ const game =(() => {
     player1 = Player('Player 1', 'X');
     player2 = Player('Player 2', 'O');
     
-    const clearBoard = () => {
-        boardResetButton.style.display = "none";
-        gameBoard.gameScore.innerHTML = "&nbsp;"
-        gameBoard.gameBoard.length = 0;
-        player1.moves = [];
-        player2.moves = [];
-        gameBoard.addClickEvent();
-        
-        Array.from(gameBoard.boardSpacesArray).forEach((element) => {
-            element.innerHTML = "";
-        
-        });
-        
-    };
-    
-    let boardResetButton = document.getElementById('boardResetButton');
-    boardResetButton.addEventListener('click', clearBoard);
-
     const updateScore = () => {
           document.getElementById("player1DisplayScore").innerHTML = player1.score;
           document.getElementById("player2DisplayScore").innerHTML = player2.score;
@@ -129,13 +111,33 @@ const game =(() => {
         });
     };
 
+    const clearBoard = () => {
+        boardResetButton.style.display = "none";
+        gameBoard.gameScore.innerHTML = "&nbsp;"
+        gameBoard.gameBoard.length = 0;
+        player1.moves = [];
+        player2.moves = [];
+        gameBoard.addClickEvent();
+
+        Array.from(gameBoard.boardSpacesArray).forEach((element) => {
+            element.innerHTML = "";
+
+        });
+
+    };
+
     const resetGame = () => {
         clearBoard();
         player1.score = 0;
         player2.score = 0;
+        updateScore();
     };
-
     
+
+    let boardResetButton = document.getElementById('boardResetButton');
+    boardResetButton.addEventListener('click', clearBoard);
+    let gameResetButton = document.getElementById('gameResetButton');
+    gameResetButton.addEventListener('click', resetGame);
 
     return {
         currentPlayer,
@@ -149,6 +151,7 @@ const game =(() => {
         checker,
         updateScore,
         boardResetButton,
+        gameResetButton,
     };
     
 })();

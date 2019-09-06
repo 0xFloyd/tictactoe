@@ -8,21 +8,25 @@
 
     <!-- Bootstrap CSS -->
     <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel='stylesheet' href='stylesheet.css'>
-
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    
     <title></title>
 </head>
 
 <body>
+    <input type="button" value="Reset" id="gameResetButton">
     <div class='container'>
         <div class="text-center">
-            <h1>Tic Tac Toe</h1>
+            <h1 id="gameTitle">Tic Tac Toe</h1>
         </div>
-        <div>
-            <h2 class="currentTurn text-center"></h2>
+        <div class="row">
+            <div class="col text-center">
+                <h2 class="text-center" id="score-paragraph">&nbsp;</h2>
+            </div>
         </div>
         <div class='tableContainer d-flex justify-content-center'>
             <table class="table-bordered">
@@ -43,13 +47,13 @@
                 </tr>
             </table>
         </div>
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
-                <div class="col text-center">
-                    Player X Score
+                <div class="col">
+                    <p>Player X Score</p>
                 </div>
-                <div class="col text-center">
-                    Player O Score
+                <div class="col">
+                    <p>Player O Score</p>
                 </div>
             </div>
             <div class="row">
@@ -60,9 +64,12 @@
                      <p id="player2DisplayScore">0</p>
                 </div>
             </div>
+            <div class="row">
+                <div class="col text-center">
+                    <input type="button" value="reset board" class="buttons center" id="boardResetButton">
+                </div>
+            </div>
         </div>
-            <h3 class="text-center" id="score-paragraph">&nbsp;</h3>
-            <input type="button" value="reset board" class="buttons center" id="boardResetButton">
         
     </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
