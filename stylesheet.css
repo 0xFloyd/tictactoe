@@ -95,11 +95,12 @@ div {
 
 
 @media only screen and (min-width : 760px) {
-    .playerXScore {
-        padding-left: 25%;
-    }
+    .boardSpace {
+        font-size: 70px;
+        text-align: center;
+        vertical-align: middle;
+        height: 150px;
+        width: 150px;
 
-    .playerOScore {
-        padding-right: 25%;
     }
 }
